@@ -1,0 +1,48 @@
+\documentclass[smallroyalvopaper, 10pt]{memoir}
+%\areaset[0.375in]{4.5in}{8in} % Matches this http://tex.stackexchange.com/questions/19497/how-do-you-setup-a-tex-document-to-self-publish-a-book-online
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+
+\usepackage[obeyFinal,final]{todonotes}
+%\usepackage[draft]{todonotes}
+\usepackage[lining,scaled=.95]{ebgaramond}
+\usepackage[T1]{fontenc}
+
+\aliaspagestyle{part}{empty}
+%\setsecnumdepth{none}
+%\maxsecnumdepth{none}
+
+\copypagestyle{modruled}{ruled}
+\makeevenhead{modruled}{}{\scshape Lev Tolstoy}{}
+\makeoddhead{modruled}{}{\scshape Childhood, Adolescence, Youth}{}
+\makeevenfoot{modruled}{}{\thepage}{}
+\makeoddfoot{modruled}{}{\thepage}{}
+
+\addtopsmarks{modruled}{}{%
+% \renewcommand\partmark[1]{\markboth{\partname \thepart. #1}}
+  \renewcommand\chaptermark[1]{}
+  \renewcommand\sectionmark[1]{}
+}
+
+\pagestyle{modruled}
+
+\author{Lev Nikolayevich Tolstoy\\ \\ translated by Chris Tessone}
+\title{Childhood, Adolescence, Youth}
+\date{ }
+
+%\includeonly{preface}
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+\thispagestyle{empty}
+
+%\include{preface}
+
+\mainmatter
+
+\include{childhood-text}
+
+\end{document}
