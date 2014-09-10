@@ -1,7 +1,10 @@
-\documentclass[smallroyalvopaper, 10pt]{memoir}
+\documentclass[smallroyalvopaper, 10pt, openany]{memoir}
 %\areaset[0.375in]{4.5in}{8in} % Matches this http://tex.stackexchange.com/questions/19497/how-do-you-setup-a-tex-document-to-self-publish-a-book-online
+%openany prevents chapters from starting a new right page with a bunch
+%of blank pages, but still doesn't do what I want exactly
 
 \renewcommand{\thechapter}{\Roman{chapter}}
+\chapterstyle{thatcher}
 
 \usepackage[obeyFinal,final]{todonotes}
 %\usepackage[draft]{todonotes}
