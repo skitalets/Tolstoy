@@ -28,13 +28,9 @@
 }
 
 % hyphenation rules
-\hyphenation{Ivan-ych}
+\hyphenation{Ivan-ych StackExchange}
 
 \pagestyle{modruled}
-
-\author{Lev Nikolayevich Tolstoy\\ \\ translated by Chris Tessone}
-\title{Childhood, Adolescence, Youth}
-\date{ }
 
 %\includeonly{preface}
 
@@ -42,8 +38,13 @@
 
 \frontmatter
 
-\maketitle
-\thispagestyle{empty}
+\input{title}
+
+%\maketitle
+%\thispagestyle{empty}
+%\clearpage 
+
+\input{copyright}
 
 %\include{preface}
 
@@ -52,10 +53,3 @@
 \include{childhood-text}
 
 \end{document}
-
-%\let\clearforchapter\relax % cheating?
-%\let\memchaptercmd\chapter 
-%\renewcommand*{\chapter}{\vspace{20pt} \memchaptercmd}
-
-%\setlength\beforechapskip{20pt} % these don't seem to have effect now 
-%\setlength\afterchapskip{20pt}    % that I've relaxed \clearforchapter !
