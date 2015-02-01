@@ -30,8 +30,6 @@
 % hyphenation rules
 \hyphenation{Ivan-ych StackExchange deft-ly quick-ly}
 
-\pagestyle{modruled}
-
 %\includeonly{preface}
 
 \begin{document}
@@ -46,10 +44,13 @@
 
 \input{copyright}
 
-%\include{preface}
+\pagestyle{modruled}
 
 \mainmatter
 
+\newpage
+\thispagestyle{empty}
+\mbox{}
 \include{childhood-text}
 
 \backmatter
