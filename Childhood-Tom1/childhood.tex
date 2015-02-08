@@ -29,7 +29,15 @@
 }
 
 % hyphenation rules
-\hyphenation{Ivan-ych StackExchange deft-ly quick-ly Ser-yo-zha Son-yech-ka}
+\hyphenation{Ivan-ych StackExchange deft-ly quick-ly Ser-yo-zha
+  Son-yech-ka}
+
+% tolerant paragraph environment
+\newenvironment{tolerant}[1]{%
+  \par\tolerance=#1\relax
+}{%
+  \par
+}
 
 %\includeonly{preface}
 
