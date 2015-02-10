@@ -1,7 +1,14 @@
 \documentclass[ebook,11pt]{memoir}
-%\areaset[0.375in]{4.5in}{8in} % Matches this http://tex.stackexchange.com/questions/19497/how-do-you-setup-a-tex-document-to-self-publish-a-book-online
-%openany prevents chapters from starting a new right page with a bunch
-%of blank pages, but still doesn't do what I want exactly
+\usepackage{geometry}
+
+\title{Childhood}
+\author{Lev Nikolayevich Tolstoy}
+
+\geometry{
+  paperheight=9in,
+  paperwidth=6in,
+  bindingoffset=.375in,
+}
 
 \renewcommand{\thechapter}{\Roman{chapter}}
 \chapterstyle{thatcher}
@@ -40,12 +47,16 @@
 }
 
 % other tolerances
-\clubpenalty=9996
-\widowpenalty=10000
-\brokenpenalty=4991
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.5em
+\hfuzz 0.3pt
+\clubpenalty=-100 
+\widowpenalty=500
+\brokenpenalty=0
 \predisplaypenalty=10000
 \postdisplaypenalty=1549
-\displaywidowpenalty=1602
+\displaywidowpenalty=0
 
 %\includeonly{preface}
 
