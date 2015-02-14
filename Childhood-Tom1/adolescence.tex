@@ -5,7 +5,7 @@
 \documentclass[11pt]{memoir}
 \usepackage{geometry}
 
-\title{Childhood}
+\title{Adolescence}
 \author{Lev Nikolayevich Tolstoy}
 
 \geometry{
@@ -29,7 +29,7 @@
 
 \copypagestyle{modruled}{ruled}
 \makeevenhead{modruled}{}{\scshape Lev Tolstoy}{}
-\makeoddhead{modruled}{}{\scshape Childhood}{}
+\makeoddhead{modruled}{}{\scshape Adolescence}{}
 \makeevenfoot{modruled}{}{\thepage}{}
 \makeoddfoot{modruled}{}{\thepage}{}
 
@@ -40,8 +40,7 @@
 }
 
 % hyphenation rules
-\hyphenation{Ivan-ych StackExchange deft-ly quick-ly Ser-yo-zha
-  Son-yech-ka}
+\hyphenation{StackExchange}
 
 % tolerant paragraph environment
 \newenvironment{tolerant}[1]{%
@@ -66,31 +65,27 @@
 
 \begin{document}
 
-\frontmatter
+%\frontmatter
 
-\input{childhood-title}
+%\input{adolescence-title}
 
-%\maketitle
-%\thispagestyle{empty}
-%\clearpage 
-
-\input{childhood-copyright}
+%\input{adolescence-copyright}
 
 \pagestyle{modruled}
 
 \mainmatter
 
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\include{childhood-text}
+%\newpage
+%\thispagestyle{empty}
+%\mbox{}
+\include{adolescence-text}
 
-\backmatter
+%\backmatter
 
-\include{childhood-tnote}
+%\include{adolescence-tnote}
 
-\newpage
-\thispagestyle{empty}
-\mbox{}
+%\newpage
+%\thispagestyle{empty}
+%x\mbox{}
 
 \end{document}
