@@ -1,0 +1,37 @@
+\newlength{\drop}\setlength{\drop}{0.12\textheight}
+
+\newcommand*{\firsttitle}{\begingroup
+\centering
+\vspace*{3em}
+{\Large CHILDHOOD}\\[\baselineskip]
+{\Large LEV NIKOLAYEVICH TOLSTOY}
+\vfill\null
+\endgroup}
+
+% Adapted from Peter Wilson's _Some Examples of Title Pages_, 2010.
+\newcommand*{\titleAM}{\begingroup
+\centering
+\vspace*{\drop}
+{\large Lev Nikolayevich Tolstoy}\\[\baselineskip]
+{\Huge CHILDHOOD}\\[\baselineskip]
+%{\Huge ADOLESCENCE,}\\[\baselineskip]
+%{\Huge YOUTH}\\[\baselineskip]
+{\scshape translated from the russian}\\
+{\scshape by}\\
+{\scshape chris tessone}\\
+\vfill%[10.0\baselineskip]
+{\scshape \includegraphics[width=1.5cm, height=1.5cm]{taman-press.png}}\\[0.5\baselineskip]
+{\small\scshape the taman press}\par
+{\small Silver Spring, Maryland}\par
+{\small\scshape 2015}\par
+\endgroup}
+
+\firsttitle
+\thispagestyle{empty}
+\clearpage
+
+\newpage\null\thispagestyle{empty}\newpage
+
+\titleAM
+\thispagestyle{empty}
+\clearpage 

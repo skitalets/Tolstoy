@@ -1,0 +1,97 @@
+% Copyright 2015 Christopher A. Tessone
+% Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+% International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\documentclass[11pt]{memoir}
+\usepackage{geometry}
+
+\title{War and Peace}
+\author{Lev Nikolayevich Tolstoy}
+
+\geometry{
+  paperheight=9in,
+  paperwidth=6in,
+  bindingoffset=.375in,
+}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\chapterstyle{thatcher}
+
+\usepackage[obeyFinal,final]{todonotes}
+%\usepackage[draft]{todonotes}
+\usepackage[lining,scaled=.95]{ebgaramond}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\aliaspagestyle{part}{empty}
+%\setsecnumdepth{none}
+%\maxsecnumdepth{none}
+
+\copypagestyle{modruled}{ruled}
+\makeevenhead{modruled}{}{\scshape Lev Tolstoy}{}
+\makeoddhead{modruled}{}{\scshape War and Peace}{}
+\makeevenfoot{modruled}{}{\thepage}{}
+\makeoddfoot{modruled}{}{\thepage}{}
+
+\addtopsmarks{modruled}{}{%
+% \renewcommand\partmark[1]{\markboth{\partname \thepart. #1}}
+  \renewcommand\chaptermark[1]{}
+  \renewcommand\sectionmark[1]{}
+}
+
+% hyphenation rules
+\hyphenation{StackExchange}
+
+% tolerant paragraph environment
+\newenvironment{tolerant}[1]{%
+  \par\tolerance=#1\relax
+}{%
+  \par
+}
+
+% other tolerances
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.5em
+\hfuzz 0.3pt
+\clubpenalty=-100 
+\widowpenalty=500
+\brokenpenalty=0
+\predisplaypenalty=10000
+\postdisplaypenalty=1549
+\displaywidowpenalty=0
+
+%\includeonly{preface}
+
+\begin{document}
+
+%\frontmatter
+
+%\input{warpeace-title}
+
+%\maketitle
+%\thispagestyle{empty}
+%\clearpage 
+
+%\input{warpeace-copyright}
+
+\pagestyle{modruled}
+
+\mainmatter
+
+\part*{Book One}
+
+%\newpage
+%\thispagestyle{empty}
+%\mbox{}
+\include{warpeace-book1-1}
+
+%\backmatter
+
+%\include{warpeace-tnote}
+
+%\newpage
+%\thispagestyle{empty}
+%\mbox{}
+
+\end{document}
